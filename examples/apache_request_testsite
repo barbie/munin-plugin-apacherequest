@@ -5,4 +5,3 @@ use Munin::Plugin::ApacheRequest;
 
 my ($VHOST) = ($0 =~ /_([^_]+)$/);
 Munin::Plugin::ApacheRequest::Run($VHOST,1000);
-
