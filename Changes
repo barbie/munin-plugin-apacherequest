@@ -1,5 +1,7 @@
 Revision history for Munin::Plugin::ApacheRequest
 =================================================
 
+        - switched to using tail option supported by Solaris.
+
 0.01    2014-04-09
         - first release
