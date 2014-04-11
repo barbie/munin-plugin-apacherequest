@@ -148,8 +148,8 @@ CONFIG
     if (@ARGV && ($ARGV[0] eq 'config')) {
         print $config;
 
-        for my $type (keys %{$types}) {
-            for my $key (keys %{$types->{$type}->{'munin_fields'}}) {
+        for my $type (sort keys %{$types}) {
+            for my $key (sort keys %{$types->{$type}->{'munin_fields'}}) {
                 printf "%s.%s %s\n", ($type, $key, $types->{$type}->{'munin_fields'}->{$key});
             }
         }
@@ -174,7 +174,7 @@ CONFIG
         }
     } 
 
-    for my $type (keys %{$types}) {
+    for my $type (sort keys %{$types}) {
         my $value = $types->{$type}->{'lines'}
               ? $types->{$type}->{'sum'} / $types->{$type}->{'lines'} : 'U';
         printf "%s.value %s\n", ($type, $value);
