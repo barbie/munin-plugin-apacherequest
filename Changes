@@ -1,6 +1,8 @@
 Revision history for Munin-Plugin-ApacheRequest
 ===============================================
 
+        - fixed license fields in META.json to be lists.
+
 0.03    2014-04-20
         - limit results to 10 decimal places.
         - capture output better, when file doesn't exist.
